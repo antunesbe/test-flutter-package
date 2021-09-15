@@ -1,0 +1,31 @@
+name: poc_connector
+description: A new flutter plugin project.
+version: 0.0.3
+# publish_to: https://santander.jfrog.io/ui/native/flutter-test-no-cache
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: br.com.santander.afe.poc_connector
+        pluginClass: PocConnectorPlugin
+      ios:
+        pluginClass: PocConnectorPlugin
+      web:
+        pluginClass: PocConnectorWeb
+        fileName: poc_connector_web.dart
+
